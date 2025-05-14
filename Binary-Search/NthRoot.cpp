@@ -27,5 +27,6 @@ int main() {
     cout << "The " << n << "th root of " << x << " is " << result << endl;
     return 0;
 }
+
 // Time Complexity: O(log(n))
 // Space Complexity: O(1)

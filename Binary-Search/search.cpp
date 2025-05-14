@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-
 int main(){
     vector<int> arr = {1, 2, 3, 4, 5};
     int n = arr.size();
@@ -22,5 +21,7 @@ int main(){
         }
     }
 }
+
+
 // Time Complexity: O(log n)
 // Space Complexity: O(1)
