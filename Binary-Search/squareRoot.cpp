@@ -1,7 +1,6 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
-
 int mySqrt(int x) {
     if (x < 2) return x;
 
@@ -22,7 +21,6 @@ int mySqrt(int x) {
 
     return ans;
 }
-
 
 int main() {
     int x = 8;
