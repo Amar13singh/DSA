@@ -2,9 +2,11 @@
 #include <vector>
 using namespace std;
 
+
 int upperBound(const vector<int>& arr, int x) {
     int low = 0;
     int high = arr.size(); // Note: high = n, not n - 1
+
 
     while (low < high) {
         int mid = low + (high - low) / 2;

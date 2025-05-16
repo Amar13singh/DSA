@@ -31,6 +31,7 @@ private:
     }
 };
 
+
 int main() {
     Solution solution;
     vector<int> weights = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -39,3 +40,5 @@ int main() {
     cout << "Minimum capacity needed: " << result << endl;
     return 0;
 }
+// Time Complexity: O(n * log(sum(weights) - max(weights)))
+// Space Complexity: O(1)

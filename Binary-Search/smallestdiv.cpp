@@ -36,4 +36,6 @@ int main(){
     cout << "Smallest divisor: " << result << endl;
     return 0;
 }
+// Time Complexity: O(n * log(max(nums)))
+// Space Complexity: O(1)
 
