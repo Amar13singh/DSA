@@ -36,3 +36,5 @@ int search(vector<int>& nums, int target) {
     cout << "Index: " << index << endl;
     return 0;
 }
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
