@@ -26,3 +26,5 @@ Solution solution;
     int result = solution.findKthPositive(arr, k);
     cout << "The " << k << "th missing positive integer is: " << result << endl;
 }
+// Time Complexity: O(n)
+// Space Complexity: O(1)
