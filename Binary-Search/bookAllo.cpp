@@ -42,14 +42,14 @@ public:
         return result;
     }
 };
-  int main() {
+
+int main() {
     Solution solution;
     vector<int> arr = {12, 34, 67, 90};
     int m = 2;
     int result = solution.allocateBooks(arr, m);
     cout << "The minimum number of pages allocated to a student is: " << result << endl;
     return 0;
-
   }
 
   //Time Complexity: O(N*log(sum(arr[])))

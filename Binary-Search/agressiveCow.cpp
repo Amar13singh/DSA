@@ -40,7 +40,6 @@ public:
     }
 };
 
-
 int main(){
     Solution solution;
     vector<int> stalls = {1, 2, 4, 8, 9};
@@ -51,3 +50,5 @@ int main(){
 
 // Time Complexity: O(n * log(max(stalls)))
 // Space Complexity: O(1)
+
+
