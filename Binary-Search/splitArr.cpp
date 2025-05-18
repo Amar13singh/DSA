@@ -48,3 +48,6 @@ int main(){
     int result = solution.splitArray(nums, k);
     cout << "The minimum largest sum of the subarrays is: " << result << endl;
 }
+
+// Time Complexity: O(n * log(sum(nums)))
+// Space Complexity: O(1)
