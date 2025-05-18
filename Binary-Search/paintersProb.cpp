@@ -45,3 +45,5 @@ int main() {
     int result = solution.paintersPartition(boards, k);
     cout << "The minimum time required to paint the boards is: " << result << endl;
 }   
+// Time Complexity: O(n * log(sum of all elements of the array))
+// Space Complexity: O(1)

@@ -40,6 +40,7 @@ public:
     }
 };
 
+
 int main(){
     Solution solution;
     vector<int> stalls = {1, 2, 4, 8, 9};
