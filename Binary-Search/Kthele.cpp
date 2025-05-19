@@ -37,3 +37,5 @@ int main() {
     int result = kthElement(arr1, arr2, k);
     cout << "The " << k << "th element is: " << result << endl;
 }
+// Time Complexity: O(log(min(m, n)))
+// Space Complexity: O(1)

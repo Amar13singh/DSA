@@ -45,3 +45,6 @@ int main(){
     double median = solution.findMedianSortedArrays(nums1, nums2);
     cout << "Median: " << median << endl;
 }
+
+// Time Complexity: O(log(min(m, n)))
+// Space Complexity: O(1)
