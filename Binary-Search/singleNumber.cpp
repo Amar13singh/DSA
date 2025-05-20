@@ -26,7 +26,6 @@ int singleNonDuplicate(vector<int>& nums) {
     return nums[low];
 }
 
-
 int main() {
     vector<int> nums = {1, 1, 2, 3, 3, 4, 4, 8, 8};
     int single = singleNonDuplicate(nums);

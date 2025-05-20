@@ -28,7 +28,6 @@ int findRotationCount(vector<int>& nums) {
     return 0; // Default fallback
 }
 
-
  int main() {
     vector<int> nums = {4, 5, 6, 7, 0, 1, 2};
     int rotationCount = findRotationCount(nums);

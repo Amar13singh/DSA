@@ -20,9 +20,12 @@ int findMin(vector<int>& nums) {
     return nums[low];
 }
 
+
 int main() {
     vector<int> nums = {4, 5, 6, 7, 3,1, 1, 2};
     int minElement = findMin(nums);
     cout << "Minimum element: " << minElement << endl;
     return 0;
 }
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
