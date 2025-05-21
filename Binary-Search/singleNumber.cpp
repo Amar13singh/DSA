@@ -32,3 +32,5 @@ int main() {
     cout << "Single element: " << single << endl;
     return 0;
 }
+// Time Complexity: O(log n)
+// Space Complexity: O(1)

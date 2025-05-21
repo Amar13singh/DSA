@@ -34,3 +34,6 @@ int findRotationCount(vector<int>& nums) {
     cout << "Rotation count: " << rotationCount << endl;
     return 0;
 }
+
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
