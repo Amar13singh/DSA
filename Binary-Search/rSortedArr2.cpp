@@ -42,3 +42,5 @@ int main() {
     cout << "Target " << target << " found: " << (found ? "Yes" : "No") << endl;
     return 0;
 }
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
