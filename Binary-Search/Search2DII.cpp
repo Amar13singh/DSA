@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+//on if the matrix is sorted in both row and column wise
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
@@ -31,3 +31,5 @@ int main() {
     cout << (found ? "Found" : "Not Found") << endl;
     return 0;
 }
+// Time Complexity: O(m + n)
+// Space Complexity: O(1)
