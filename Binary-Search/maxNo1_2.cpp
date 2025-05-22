@@ -34,3 +34,5 @@ public:
     cout << "Row with maximum 1s: " << maxRow+1 << endl;
     return 0;
   }
+//   Time Complexity: O(n + m)
+// Space Complexity: O(1)
