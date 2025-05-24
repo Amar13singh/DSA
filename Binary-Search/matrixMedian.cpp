@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using  namespace std;
 
+
+
+//based on counting the number of elements smaller than the median in each row 
+//and then incrementing the count by the number of rows. 
 class Solution {
 public:
     int countSmallerThanEqual(const vector<int>& row, int target) {
@@ -52,5 +56,8 @@ int main() {
     return 0;
 
 }
+
+// Time Complexity: O(r * log(c) * log(INT_MAX))
+// Space Complexity: O(1)
 
 
