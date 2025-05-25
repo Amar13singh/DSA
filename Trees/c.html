@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Full Background Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://cdn.dribbble.com/userupload/6508149/file/original-c4197a5bf25a4356aa2bac6f82073eb2.jpg?resize=752x&vertical=center') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px 40px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 30px;
+      font-size: 18px;
+      position: relative;
+      padding-bottom: 5px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      border-bottom: 2px solid white;
+      cursor: pointer;
+    }
+
+    .login-button {
+      margin-left: auto;
+      border: 2px solid white;
+      padding: 5px 15px;
+      border-radius: 6px;
+    }
+
+    #content {
+      padding: 40px;
+      margin: 30px auto;
+      width: 80%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      font-size: 16px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="navbar">
+      <a class="nav-link active" onclick="loadContent('home', this)">Home</a>
+      <a class="nav-link" onclick="loadContent('about', this)">About</a>
+      <a class="nav-link" onclick="loadContent('services', this)">Services</a>
+      <a class="nav-link" onclick="loadContent('contact', this)">Contact</a>
+      <a class="login-button" href="#">Login</a>
+    </div>
+
+    <div id="content">
+      <h2>Welcome!</h2>
+      <p>Click a menu item to load dynamic content below.</p>
+    </div>
+  </div>
+
+  <script>
+    const contentMap = {
+      home: {
+        title: "Home Content Loaded",
+        text: "This is the dynamic content for the Home section. Welcome to our homepage!"
+      },
+      about: {
+        title: "About Us",
+        text: "We are a passionate team focused on delivering quality services to our users."
+      },
+      services: {
+        title: "Our Services",
+        text: "We offer a range of services tailored to your needs, from consulting to support."
+      },
+      contact: {
+        title: "Contact Us",
+        text: "Reach out to us at support@example.com or call us at (123) 456-7890."
+      }
+    };
+
+    function loadContent(section, element) {
+      const content = contentMap[section];
+      document.getElementById("content").innerHTML = `
+        <h2>${content.title}</h2>
+        <p>${content.text}</p>
+      `;
+
+      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+      element.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg'); /* your image here */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-start;
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.6); /* semi-transparent for better text visibility */
+      color: white;
+    }
+
+    .navbar a {
+      margin-right: 30px;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      font-size: 18px;
+      padding-bottom: 4px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      border-bottom: 2px solid white;
+      cursor: pointer;
+    }
+
+    .login-button {
+      border: 2px solid white;
+      padding: 5px 15px;
+      border-radius: 6px;
+      margin-left: auto;
+    }
+
+    #content {
+      margin: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a class="active" onclick="loadHome()">Home</a>
+    <a onclick="loadAbout()">About</a>
+    <a onclick="loadServices()">Services</a>
+    <a onclick="loadContact()">Contact</a>
+    <a class="login-button" href="#">Login</a>
+  </div>
+
+  <div id="content">
+    <h2>Welcome!</h2>
+    <p>Click on Home to load dynamic content.</p>
+  </div>
+
+  <script>
+    function loadHome() {
+      document.getElementById("content").innerHTML = `
+        <h2>Home Content Loaded</h2>
+        <p>This is dynamic content for Home.</p>
+      `;
+    }
+
+    function loadAbout() {
+      document.getElementById("content").innerHTML = `
+        <h2>About Us</h2>
+        <p>Information about our company.</p>
+      `;
+    }
+
+    function loadServices() {
+      document.getElementById("content").innerHTML = `
+        <h2>Our Services</h2>
+        <p>Details about services offered.</p>
+      `;
+    }
+
+    function loadContact() {
+      document.getElementById("content").innerHTML = `
+        <h2>Contact Us</h2>
+        <p>Reach out to us through this page.</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
