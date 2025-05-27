@@ -19,7 +19,7 @@ header {
   gap: 20px;
 }
 
-.navigation a, .btnLogin-popup, .dropbtn {
+.navigation a, .btnLogin-popup {
   color: #fff;
   text-decoration: none;
 
@@ -31,12 +31,12 @@ header {
   padding: 8px 12px;
 }
 
-.navigation .dropdown {
+.navigation {
   position: relative;
 }
 
 .submenu {
-  display: none;
+  /* display: none;
   position: absolute;
   top: 40px;
   left: 0;
@@ -44,14 +44,31 @@ header {
   border: 1px solid #333;
   border-radius: 4px;
   min-width: 150px;
-  z-index: 10;
+  z-index: 10; */
+
+  display: none;
+  position: absolute;
+  background-color: #1e1e1e;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 100%; /* Show below the button */
+  right: 0;  /* Align to right if you prefer */
+
 }
 
 .submenu a {
-  display: block;
+  /* display: block;
   padding: 10px 15px;
   color: #fff;
+  text-decoration: none; */
+  color: #fff;
+  padding: 12px 16px;
   text-decoration: none;
+  display: block;
+  transition: background 0.3s;
 }
 
 .submenu a:hover {
@@ -68,6 +85,16 @@ header {
   border-radius: 5px;
   color: white;
   padding: 8px 14px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* Optional: make sure nav links are spaced well */
+.nav-link {
+  margin: 0 10px;
+  border-radius: 5px;
 }
 
 /* Responsive fix (optional for smaller screens) */
@@ -281,4 +308,27 @@ body.popup-open::before {
   width: 100vw; height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: 998;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  color: #fff; /* Change to suit your theme */
+  font-size: 20px;
+  
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
+
+.dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
