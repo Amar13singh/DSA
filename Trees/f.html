@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Click Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      background-color: #333;
+      color: white;
+      padding: 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      padding: 14px 20px;
+      display: block;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      background-color: #444;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      top: 100%;
+      left: 0;
+      min-width: 260px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+
+    .dropdown a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown.show {
+      display: block;
+    }
+
+    /* Placeholder content to test overlap */
+    .content {
+      height: 1000px;
+      padding: 20px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-item">
+    <div class="nav-link">Home</div>
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-link" onclick="toggleDropdown()">Services ▼</div>
+    <div class="dropdown" id="servicesDropdown">
+      <a href="#">News & Announcements</a>
+      <a href="#">GM’s Annual Report</a>
+      <a href="#">Press Releases</a>
+      <a href="#">Video on 3000HP Export</a>
+      <a href="#">Samwad</a>
+      <a href="#">Tourism</a>
+      <a href="#">Achievements of BLW</a>
+      <a href="#">Civil Defence</a>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-link">Contact</div>
+  </div>
+</div>
+
+<!-- Simulated page content -->
+<div class="content">
+  <h2>Welcome to the Main Content</h2>
+  <p>Click "Services" to toggle the dropdown menu like your reference image.</p>
+</div>
+
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("servicesDropdown");
+    dropdown.classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.nav-link')) {
+      let dropdowns = document.getElementsByClassName("dropdown");
+      for (let i = 0; i < dropdowns.length; i++) {
+        let openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

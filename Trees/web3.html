@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRIS Portal</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script src="script2.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body style="background-image: url('https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+  <header>
+    <h2 class="logo">CRIS</h2>
+    <div class="menu-toggle" id="menu-toggle">
+  <ion-icon name="menu-outline"></ion-icon>
+</div>
+
+    <nav class="navigation">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="service.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="dropdown">
+        <button class="dropbtn">More ▾</button>
+        <div class="submenu">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
+          <a href="#">Option 4</a>
+          <a href="#">Option 5</a>
+          <a href="#">Option 6</a>
+        </div>
+      </div>
+      <button class="btnLogin-popup">Login</button>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" required placeholder=" " />
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required placeholder=" " />
+          <label>Password</label>
+        </div>
+
+        <div class="remember-forgot">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="login-register">
+          <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>Register</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" required placeholder=" " />
+          <label>Username</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" required placeholder=" " />
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required placeholder=" " />
+          <label>Password</label>
+        </div>
+
+        <div class="remember-forgot">
+          <label><input type="checkbox" /> I agree to the terms & conditions</label>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+
+        <div class="login-register">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

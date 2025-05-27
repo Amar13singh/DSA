@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">MySite</div>
+    <nav class="navigation">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Services</a>
+      <a href="#" class="nav-link">Contact</a>
+      <button class="btnLogin-popup">Login</button>
+    </nav>
+  </header>
+
+  <div class="wrapper" id="loginPopup">
+    <span class="icon-close" id="closeBtn"><i class="fas fa-times"></i></span>
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form>
+        <div class="input-box">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          <input type="email" required placeholder=" ">
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class="fas fa-lock"></i></span>
+          <input type="password" required placeholder=" ">
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
