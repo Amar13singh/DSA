@@ -11,6 +11,7 @@ int main() {
         for (int j = i; j < s.size(); ++j) {
             temp += s[j];
             unique_substrings.insert(temp);
+            cout << temp << endl;
             total++; // if counting all substrings including duplicates
         }
     }
