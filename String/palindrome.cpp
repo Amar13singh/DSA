@@ -26,7 +26,7 @@ private:
                 maxLen = right - left + 1;
             }
             left--;
-            right++;
+            right++;q
         }
     }
 };
@@ -41,3 +41,5 @@ int main() {
     return 0;
 
 }
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
