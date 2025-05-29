@@ -25,8 +25,7 @@ class Node{
 
 };
 
-Node* ConvertArr2LL(vector<int> &arr)
-{
+Node* ConvertArr2LL(vector<int> &arr){
         Node* head = new Node(arr[0]);
         Node *mover = head;
         for(int i=1;i<arr.size();i++){
@@ -36,7 +35,6 @@ Node* ConvertArr2LL(vector<int> &arr)
 
         }
         return head;
-
 }
 
 int lengthOfLL(Node* head)
@@ -102,7 +100,7 @@ int main()
     cout<<"Length of the LinkedList is:"<<lengthOfLL(head)<<"\n";
     cout<<checkifPresent(head, 4)<<"\n";// 0
     cout<<checkifPresent(head, 8);// 1
-    
+
     return 0;
 
     
