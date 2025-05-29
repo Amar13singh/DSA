@@ -102,7 +102,9 @@ int main()
     cout<<"Length of the LinkedList is:"<<lengthOfLL(head)<<"\n";
     cout<<checkifPresent(head, 4)<<"\n";// 0
     cout<<checkifPresent(head, 8);// 1
+    
+    return 0;
 
     
 
-    }
+}
