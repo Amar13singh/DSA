@@ -60,7 +60,7 @@ int main(){
     insertAtEnd(5);
     insertAtEnd(6);
     insertAtEnd(7);
-    // insertAtEnd(8);
+    insertAtEnd(8);
     // insertAtEnd(9);
     // insertAtEnd(10);
     middleNode(head);

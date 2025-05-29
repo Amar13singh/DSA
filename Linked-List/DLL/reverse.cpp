@@ -31,32 +31,23 @@ public:
         newNode->prev = temp;
     }
 
-    // Delete node with a given key
-    void deleteByKey(int key) {
-        if (!head) return;
+    // Reverse the doubly linked list
+    void reverse() {
+        ListNode* current = head;
+        ListNode* prevNode = nullptr;
 
-        ListNode* temp = head;
+        while (current) {
+            // Swap next and prev pointers
+            ListNode* nextNode = current->next;
+            current->next = prevNode;
+            current->prev = nextNode;
 
-        // If head needs to be deleted
-        if (head->val == key) {
-            head = head->next;
-            if (head) head->prev = nullptr;
-            delete temp;
-            return;
+            // Move pointers forward
+            prevNode = current;
+            current = nextNode;
         }
 
-        // Search for the node
-        while (temp && temp->val != key) {
-            temp = temp->next;
-        }
-
-        if (!temp) return; // Key not found
-
-        // Remove the node
-        if (temp->prev) temp->prev->next = temp->next;
-        if (temp->next) temp->next->prev = temp->prev;
-
-        delete temp;
+        head = prevNode;
     }
 
     // Print the list
@@ -78,11 +69,10 @@ int main() {
     dll.insert(5);
     cout << "Original List: ";
     dll.print();
-    dll.deleteByKey(3);
-    cout << "List after deleting 3: ";
+    dll.reverse();
+    cout << "Reversed List: ";
     dll.print();
     return 0;
+
 }
 
-// Time Complexity: O(n)   
-// Space Complexity: O(1)
