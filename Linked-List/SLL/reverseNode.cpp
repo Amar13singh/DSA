@@ -70,7 +70,7 @@ int main() {
     printList(head);
 
     Solution sol;
-    int k = 3;
+    int k = 5;
     ListNode* newHead = sol.reverseKGroup(head, k);
 
     cout << "Reversed in K Group List (k=" << k << "): ";
