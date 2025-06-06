@@ -46,3 +46,5 @@ int main(){
     cout << sol.robotWithString(s) << endl;
     return 0;
 }
+// Time Complexity: O(n)
+// Space Complexity: O(n)
