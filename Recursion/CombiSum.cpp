@@ -1,32 +1,50 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 
-// Subsets (LC 78)
-void generate(int i, vector<int>& nums, vector<int>& curr, vector<vector<int>>& ans,int k) {
-    int sum = 0;
-    // if (i == nums.size()) {
-        if(sum == k){
-        ans.push_back(curr);
-        return;
-        // }
-    }
-    curr.push_back(nums[i]);
-    sum += nums[i];
-    generate(i + 1, nums, curr, ans,k);
-    curr.pop_back();
-    generate(i + 1, nums, curr, ans,k);
-}
 
-int main() {
-    vector<int> nums = {1, 2, 3};
-    int K = 3;
-    vector<vector<int>> ans;
-    vector<int> curr;
-    generate(0, nums, curr, ans,K);
-    for (auto v : ans) {
-        for (auto x : v) cout << x << " ";
+
+
+    void dfs(int start,
+         int remaining,
+         const vector<int>& cand,
+         vector<int>& current,
+         vector<vector<int>>& result)
+{
+    if (remaining == 0) {
+        result.push_back(current);
+        return;
+    }
+    if (remaining < 0) return;
+
+    for (int i = start; i < cand.size(); ++i) {
+        int x = cand[i];
+        if (x > remaining) continue;    // prune
+        current.push_back(x);           // pick
+        dfs(i, remaining - x, cand, current, result);
+        current.pop_back();             // backtrack
+    }
+}
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> result;
+    vector<int> current;
+    dfs(0, target, candidates, current, result);
+    return result;
+        
+        
+    }
+
+
+    int main() {
+    vector<int> candidates = {2, 3, 6, 7};
+    int target = 7;
+    vector<vector<int>> result = combinationSum(candidates, target);
+    for (const auto& combination : result) {
+        for (int num : combination) {
+            cout << num << " ";
+        }
         cout << endl;
     }
     return 0;
+
 }
