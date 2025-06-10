@@ -2,9 +2,6 @@
 using namespace std;
 
 
-
-
-
     void dfs(int start,
          int remaining,
          const vector<int>& cand,
