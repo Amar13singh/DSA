@@ -9,3 +9,12 @@ int main() {
     cout << "Is " << n << " odd? " << (isOdd(n) ? "Yes" : "No") << endl;
     return 0;
 }
+
+
+// Key Concept:
+// In binary, the least significant bit (LSB) determines if a number is odd or even:
+
+// If LSB is 1 → Number is odd
+
+// If LSB is 0 → Number is even
+
