@@ -1,8 +1,21 @@
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// bool  isPowerOfTwo(int n) {
+//     return n > 0 && (n & (n - 1)) == 0;
+// }
+// int main() {
+//     int n = 15;
+//     cout << "Is " << n << " a power of 2?: " << (isPowerOfTwo(n) ? "Yes" : "No") << endl;
+//     return 0;
+// }
+
+//alternate
+#include <bits/stdc++.h>
 using namespace std;
 
-bool  isPowerOfTwo(int n) {
-    return n > 0 && (n & (n - 1)) == 0;
+bool isPowerOfTwo(int n) {
+    return n > 0 && __builtin_popcount(n) == 1;
 }
 int main() {
     int n = 15;
