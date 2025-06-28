@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//Brute Force (O(n^2) time, O(1) space)
 class Solution {
 public:
     int trap(vector<int>& height) {
