@@ -2,7 +2,6 @@
 using namespace std;
 
 
-
 //DP with Precomputed Arrays (O(n) time, O(n) space)
 int trap(vector<int>& height) {
     int n = height.size();
