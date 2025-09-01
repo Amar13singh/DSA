@@ -4,11 +4,12 @@ using namespace std;
 
 int main() {
     priority_queue<int> maxHeap; // Max Heap (default)
+    maxHeap.push(19);
+    maxHeap.push(84);
     maxHeap.push(10);
+    maxHeap.push(17);
     maxHeap.push(5);
-    maxHeap.push(20);
-    maxHeap.push(15);
-    maxHeap.push(25);
+    maxHeap.push(3);
 
     while (!maxHeap.empty()) {
         cout << maxHeap.top() << " ";
