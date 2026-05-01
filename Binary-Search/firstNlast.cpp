@@ -42,3 +42,6 @@ int main(){
     cout<<"First and last occurence is:"<<ans[0]<<" "<<ans[1];
     return 0;
 }
+
+// Time Complexity:O(logn)
+// Space Complexity:O(1)
