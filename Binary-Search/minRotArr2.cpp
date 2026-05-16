@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+
+//when there is duplicates in array .......
+//faang favourite....
 int findMin(vector<int>& nums) {
     int low = 0, high = nums.size() - 1;
 
@@ -22,7 +25,7 @@ int findMin(vector<int>& nums) {
 
 
 int main() {
-    vector<int> nums = {4, 5, 6, 7, 3,1, 1, 2};
+    vector<int> nums = {4, 5, 6, 7, 3 ,1, 1, 0, 0, 2};
     int minElement = findMin(nums);
     cout << "Minimum element: " << minElement << endl;
     return 0;
