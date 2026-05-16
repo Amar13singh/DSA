@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
- int minOperations(vector<vector<int>>& grid, int z) {
+int minOperations(vector<vector<int>>& grid, int z) {
         int n = grid.size();
         int m = grid[0].size();
         vector<int> arr;
@@ -17,6 +17,7 @@ using namespace std;
         int ans = 0;
 
         // Feasibility check
+        // all elements should have same modulo xi mod z = const....
         int mod = arr[0] % z;
         for (int x : arr) {
             if (x % z != mod) return -1;
