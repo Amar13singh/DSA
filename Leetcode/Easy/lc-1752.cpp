@@ -16,7 +16,7 @@ bool rotatedAndSorted(vector<int>& arr){
 
 int main(){
     vector<int> nums = {3,4,5,1,2,2,3};
-    cout<<rotatedAndSorted(nums);
+    rotatedAndSorted(nums)==1? cout<<"True":cout<<"False";
 }
 
 
