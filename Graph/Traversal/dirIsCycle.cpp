@@ -1,15 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//cycle detection in directed graph using dfs....
+
 bool dfs(int node,vector<vector<int>> & mat,vector<int>& vis,vecotr<int> & pathvis){
     vis[node]=1;
     pathvis[node]= 1;
 
     for(int x:mat[node]){
         if(!vis[x]){
-            
-        }
+            if(dfs(x,mat,vis,pathvis)) return true;
+        }else if(pathvis[x]) return true;
     }
+    pathvis[node]=0;
+    return false;
 }
 
 
