@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 //works even on duplicates...
 
 bool rotatedAndSorted(vector<int>& arr){
