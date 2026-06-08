@@ -26,7 +26,7 @@ vector<int>dfsTr(vector<vector<int>> arr, int start){
 
 
 int main(){
-    vector<vector<int>> arr={
+    vector<vector<int>> arr={ //Adjacency list...
         {1,2},
         {0,3,4},
         {0,5,6},
