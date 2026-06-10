@@ -2,13 +2,10 @@
 using namespace std;
 
 
-    void dfs(int node,
-            vector<vector<int>>& adj,
-            vector<int>& vis)
-    {
+    void dfs(int node,vector<vector<int>>& adj,vector<int>& vis){
         vis[node] = 1;
 
-        for(int nei : adj[node])
+        for(int nei : adj[node])  //due to adjacency list ...
         {
             if(!vis[nei])
             {
