@@ -75,7 +75,7 @@ vector<vector<int>> adj2 = {  //contain cycle...
 };
 
 
-    vector<int> ans = topoSort(adj);
+    vector<int> ans = topoSort(adj2);
 
     cout << "Topological Order: ";
 

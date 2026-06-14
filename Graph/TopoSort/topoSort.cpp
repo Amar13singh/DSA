@@ -30,7 +30,7 @@ vector<int> topoSort(vector<vector<int>>& mat){
             dfs(i,mat,vis,st);
         }
     }
-
+//pushing nodes in array/vector..in reverse order...
     while(!st.empty()){
         ans.push_back(st.top());
         st.pop();
