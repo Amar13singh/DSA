@@ -37,7 +37,7 @@ vector<int> shortestPath(
 
     int cur = dest;
 
-    while(cur != -1)
+    while(cur != -1)          //genius idea...
     {
         path.push_back(cur);
         cur = parent[cur];
