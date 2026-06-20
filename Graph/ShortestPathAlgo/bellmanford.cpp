@@ -18,6 +18,7 @@ vector<int> bellmanFord(vector<Edge>& edges,int src){
         int v = e.v;
         int w = e.w;
 
+        //Relaxation..the core concept which update dist ...
         if(dist[u]!=INT_MAX && dist[u]+w <dist[v]){
             dist[v] = dist[u]+w;
             updated = true;
