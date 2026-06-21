@@ -35,7 +35,7 @@ vector<int> topoSort(vector<vector<int>>& adj){
 
             st.push({node,true});
 
-            for(int i=adj[node].size()-1;i>=0;i--)
+            for(int i=adj[node].size()-1;i>=0;i--)  //pushing in reverse order...
             {
                 int nbr=adj[node][i];
 
