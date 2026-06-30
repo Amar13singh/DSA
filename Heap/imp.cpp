@@ -25,28 +25,7 @@ class MinHeap {
         }
     }
 
-public:
-/*************  ✨ Windsurf Command ⭐  *************/
-    /**
-     * Inserts the given value into the heap.
-     *
-     * Time complexity: O(log n)
-     *
-     * @param val the value to be inserted
-     */
-/*******  3323135b-621e-4bf1-8405-d01590000589  *******/    
-    void insert(int val) {
-        heap.push_back(val);
-        heapifyUp(heap.size() - 1);
-    }
-    
-    /**
-     * Returns the minimum value of the heap. If the heap is empty, returns -1.
-     *
-     * Time complexity: O(1)
-     *
-     * @return the minimum value of the heap, or -1 if the heap is empty
-     */
+
     int getMin() {
         return heap.empty() ? -1 : heap[0];
     }
@@ -62,16 +41,22 @@ public:
         for (int val : heap) cout << val << " ";
         cout << endl;
     }
+    void buildHeap(vector<int>& arr){
+
+    }
 };
 
-int main() {
-    MinHeap h;
-    h.insert(5); h.insert(3); h.insert(17); h.insert(10); h.insert(84); h.insert(19);
-    h.printHeap();
-    h.removeMin();
-    h.printHeap();
-    return 0;
-}
+
+//driver code....
+
+// int main() {
+//     MinHeap h;
+//     h.insert(5); h.insert(3); h.insert(17); h.insert(10); h.insert(84); h.insert(19);
+//     h.printHeap();
+//     h.removeMin();
+//     h.printHeap();
+//     return 0;
+// }
 
 // Time Complexity: O(log n)
 // Space Complexity: O(n)
