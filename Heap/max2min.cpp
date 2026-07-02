@@ -2,9 +2,6 @@
 using namespace std;
 
 
-class Solution {
-public:
-
     void minHeapify(vector<int>& arr, int n, int i)
     {
         int smallest = i;
@@ -32,10 +29,13 @@ public:
         for (int i = n / 2 - 1; i >= 0; i--)
             minHeapify(arr, n, i);
     }
-};
+
 
 int main(){
-    vector<int> arr1={10,20,40,50,30,90,80,100,60,70};
+    vector<int> arr1={100,90,80,70,60,50,40,20,10};
     // vector<int> arr2={20,10,20,40,50,30,90,80,100,60,70};
-    
+    convertMaxToMin(arr1);
+    cout<<"min heap is: ";
+    for(int x:arr1) cout<<x<<" ";
+
 }
