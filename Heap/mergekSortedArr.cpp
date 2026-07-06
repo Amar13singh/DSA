@@ -52,3 +52,32 @@ vector<int> mergeKSortedArrays(vector<vector<int>>& nums)
 
     return ans;
 }
+
+
+int main()
+{
+    vector<vector<int>> nums =
+    {
+        {1,4,7},
+        {2,5,8},
+        {3,6,9}
+    };
+    vector<vector<int>> nums1 =
+{
+    {1,10,20},
+    {2,5,30},
+    {-3,6,7,8},
+    {4},
+    {},
+    {11,15,25,40}
+};
+
+    vector<int> ans = mergeKSortedArrays(nums1);
+
+    for (int x : ans)
+        cout << x << " ";
+}
+
+
+// Time: O(N log K)
+// Space: O(K) for the heap (excluding the output array)
