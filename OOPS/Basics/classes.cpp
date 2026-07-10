@@ -6,7 +6,7 @@ class Dog{
         string breed, color;       //Data members
 }; 
 
-void main(){
+int main(){
 
 //We can access these data members breed and color by (.) operator.
 
