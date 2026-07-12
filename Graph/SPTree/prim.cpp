@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//Heap based Prim Algo...
 int prim(int V, vector<vector<pair<int,int>>>& adj){
     priority_queue<
         pair<int,int>,
@@ -13,6 +14,7 @@ int prim(int V, vector<vector<pair<int,int>>>& adj){
     pq.push({0,0});
 
     int mstCost = 0;
+    int Vsed =0;
 
     while(!pq.empty())
     {
@@ -24,6 +26,7 @@ int prim(int V, vector<vector<pair<int,int>>>& adj){
 
         vis[node] = 1;
         mstCost += wt;
+        Vsed++;
 
         for(auto &[nbr,edgeWt] : adj[node])
         {
@@ -31,6 +34,7 @@ int prim(int V, vector<vector<pair<int,int>>>& adj){
                 pq.push({edgeWt,nbr});
         }
     }
+    if(Vsed!=V) return -1;
 
     return mstCost;
 }
@@ -65,3 +69,8 @@ int main()
 
     return 0;
 }
+
+// Complexity:
+    // Time:O(ElogV)
+    // Space:O(V)
+
