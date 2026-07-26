@@ -75,14 +75,15 @@ void levelOrder(TreeNode* root)
     }
 }
 
+
 // Height
-int height(TreeNode* root)
-{
+int height(TreeNode* root){
     if (root == nullptr)
         return 0;
 
     return 1 + max(height(root->left), height(root->right));
 }
+
 
 // Size
 int size(TreeNode* root)
@@ -92,6 +93,7 @@ int size(TreeNode* root)
 
     return 1 + size(root->left) + size(root->right);
 }
+
 
 // Leaf Count
 int leafCount(TreeNode* root)
@@ -116,6 +118,7 @@ void deleteTree(TreeNode* root)
 
     delete root;
 }
+
 
 int main()
 {
