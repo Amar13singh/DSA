@@ -119,6 +119,3 @@ bool same(TreeNode* a,
             same(a->left,b->left) &&
             same(a->right,b->right);
 }
-
-
-//
