@@ -1,5 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
 
+struct TreeNode
+{
+    int val;
+    TreeNode *left, *right;
 
+    TreeNode(int x)
+    {
+        val = x;
+        left = right = nullptr;
+    }
+};
 
 
 
@@ -21,11 +33,11 @@ vector<int> bottomView(TreeNode* root)
 
     while(!q.empty())
     {
-        auto it=q.front();
+        auto [nd,cl]=q.front();
         q.pop();
 
-        TreeNode* node=it.first;
-        int col=it.second;
+        TreeNode* node=nd;
+        int col=cl;
 
         mp[col]=node->val;
 
@@ -40,4 +52,17 @@ vector<int> bottomView(TreeNode* root)
         ans.push_back(x.second);
 
     return ans;
+}
+
+int main(){
+    TreeNode* root = new TreeNode(3);
+    root->left = new TreeNode(9);
+    root->right = new TreeNode(20);
+
+    root->right->left = new TreeNode(15);
+    root->right->right = new TreeNode(7);
+
+    vector<int>arr = bottomView(root);
+    cout<<"bottom view: ";
+    for(int x:arr) cout<<x<<" ";
 }
